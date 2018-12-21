@@ -1,6 +1,6 @@
 const path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
- 
+
 /**
  * @type {import('webpack').Configuration}
  */
@@ -29,7 +29,7 @@ const config = {
             },
         ],
     },
-    optimization:{
+    optimization: {
         minimizer: [
             new UglifyJsPlugin({
                 parallel: true,
@@ -41,6 +41,9 @@ const config = {
                 },
             }),
         ],
+    },
+    node: {
+        fs: 'empty',
     },
 };
 
