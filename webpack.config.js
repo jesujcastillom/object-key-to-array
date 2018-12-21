@@ -6,6 +6,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
  */
 const config = {
     mode: 'production',
+    devtool: 'cheap-module-source-map',
     entry: {
         lib: './src/index.ts',
         'lib.min': './src/index.ts',
@@ -42,4 +43,4 @@ const config = {
     },
 };
 
-export default config;
+module.exports = config;
