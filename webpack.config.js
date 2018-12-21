@@ -1,5 +1,5 @@
 const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 /**
  * @type {import('webpack').Configuration}
@@ -31,13 +31,16 @@ const config = {
     },
     optimization: {
         minimizer: [
-            new UglifyJsPlugin({
+            new TerserPlugin({
                 parallel: true,
+                cache: true,
                 sourceMap: true,
                 include: /\.min\.js$/,
-                uglifyOptions: {
+                terserOptions: {
                     ie8: false,
-                    mangle: true,
+                    output: {
+                        comments: false,
+                    },
                 },
             }),
         ],
