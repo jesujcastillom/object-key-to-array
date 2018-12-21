@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "npm run build",
-    "prebuild": "rimraf lib lib-esm dist",
+    "prebuild": "rimraf lib lib-esm _bundles",
     "build": "tsc",
     "postbuild": "tsc -m es6 --outDir lib-esm && webpack"
   },
