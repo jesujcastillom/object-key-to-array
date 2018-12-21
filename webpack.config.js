@@ -34,6 +34,7 @@ const config = {
             new UglifyJsPlugin({
                 parallel: true,
                 sourceMap: true,
+                include: /\.min\.js$/,
                 uglifyOptions: {
                     ie8: false,
                     mangle: true,

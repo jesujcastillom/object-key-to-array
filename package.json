@@ -2,7 +2,7 @@
   "name": "object-key-to-array",
   "version": "1.0.3",
   "description": "",
-  "main": "index.js",
+  "main": "lib-esm/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "npm run build",
@@ -11,8 +11,17 @@
     "postbuild": "tsc -m es6 --outDir lib-esm && webpack"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "email": "castillojesuj@gmail.com",
+    "name": "Jesú Castillo",
+    "url": "https://www.github.com/jesujcastillom"
+  },
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jesujcastillom/object-key-to-array.git"
+  },
+  "bin": "./lib/index.js",
   "devDependencies": {
     "@types/source-map": "^0.5.2",
     "@types/webpack": "^4.4.22",
