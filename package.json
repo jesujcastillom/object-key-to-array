@@ -1,0 +1,22 @@
+{
+  "name": "object-key-to-array",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build",
+    "prebuild": "rimraf lib lib-esm dist",
+    "build": "tsc",
+    "postbuild": "tsc -m es6 --outDir lib-esm && webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/webpack": "^4.4.22",
+    "rimraf": "^2.6.2",
+    "typescript": "^3.2.2",
+    "uglifyjs-webpack-plugin": "^2.0.1"
+  }
+}
